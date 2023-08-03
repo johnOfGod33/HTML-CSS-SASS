@@ -1,0 +1,38 @@
+@mixin myTextDecoration($fc, $fs) {
+    color: $fc;
+    font-size: $fs;
+}
+
+@mixin blocOption($bg : brown, $h : 100px, $w : 100px){
+    background-color: $bg;
+    height: $h;
+    width: $w;
+}
+.boite{
+    display: flex;
+    
+    &__1{
+       @include blocOption();
+    }
+    &__2{
+        @include blocOption(red, 300px, 200px)
+    }
+    &__3{
+       @include blocOption(magenta, 400px, 300px)
+    }
+}
+
+.custom{
+    &1{
+        @include myTextDecoration(red, 50px);
+    }
+    &2{
+        @include myTextDecoration(magenta, 75px);
+    }
+    &3{
+        @include myTextDecoration(greenyellow, 100px);
+    }
+    &4{
+        @include myTextDecoration(brown, 125px);
+    }
+}
