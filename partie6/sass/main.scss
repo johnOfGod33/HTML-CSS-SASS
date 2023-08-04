@@ -1,0 +1,64 @@
+@mixin flexboxConfig($justifyContent: center, $alignItem: center, $flexdirection: row){
+    display: flex;
+    flex-direction: $flexdirection;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+@mixin myBlockOption($bgc:white, $h:100px, $w:100px,){
+    height: $h;
+    width: $w;
+    background-color: $bgc;
+}
+
+.dynamics {
+    div{
+    @include flexboxConfig(space-around, baseline);
+    }
+   &__box1{
+    
+    @include myBlockOption(red, 200px, 200px);
+    
+    &:hover{
+        @include myBlockOption(yellow)
+    }
+   }
+   &__box2{
+    @include myBlockOption(magenta, 200px, 200px);
+   }
+   &__box3{
+    @include myBlockOption(brown, 200px, 200px);
+   }
+
+   a{
+    text-decoration: none;
+    font-size: 1.3em;
+    &active{
+        color: red;
+    }
+    &visited{
+        color: violet;
+    }
+   }
+
+}
+
+.card{
+    border: 1px solid red;
+}
+section{
+    display: inline;
+    border: 1px dashed black
+}
+article{
+   @include myBlockOption(black, 200px, 250px);
+}
+
+aside{
+    padding-left: 10px;
+   @include myBlockOption(white, 80px, 250px);
+   
+   p{
+    background-color: blueviolet;
+   }
+}

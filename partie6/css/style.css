@@ -1,0 +1,63 @@
+.dynamics div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.dynamics__box1 {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+.dynamics__box1:hover {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+.dynamics__box2 {
+  height: 200px;
+  width: 200px;
+  background-color: magenta;
+}
+.dynamics__box3 {
+  height: 200px;
+  width: 200px;
+  background-color: brown;
+}
+.dynamics a {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+.dynamics aactive {
+  color: red;
+}
+.dynamics avisited {
+  color: violet;
+}
+
+.card {
+  border: 1px solid red;
+}
+
+section {
+  display: inline;
+  border: 1px dashed black;
+}
+
+article {
+  height: 200px;
+  width: 250px;
+  background-color: black;
+}
+
+aside {
+  padding-left: 10px;
+  height: 80px;
+  width: 250px;
+  background-color: white;
+}
+aside p {
+  background-color: blueviolet;
+}
+
+/*# sourceMappingURL=style.css.map */
